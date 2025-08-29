@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#0f0c29">
+  <title>Nguyễn Cảnh Điền - Du Học Sinh Hàn Quốc</title>
+  <meta name="description" content="Trang cá nhân của Nguyễn Cảnh Điền — Du Học Sinh Hàn Quốc, DJ Producer, Lập trình viên web" />
+  <meta name="keywords" content="Nguyễn Cảnh Điền, du học Hàn Quốc, DJ producer, lập trình web, portfolio">
+  <meta name="author" content="Nguyễn Cảnh Điền">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://your-domain.com/">
+  <meta property="og:title" content="Nguyễn Cảnh Điền - Du Học Sinh Hàn Quốc">
+  <meta property="og:description" content="Trang cá nhân của Nguyễn Cảnh Điền — Du Học Sinh Hàn Quốc, DJ Producer, Lập trình viên web">
+  <meta property="og:image" content="https://your-domain.com/og-image.jpg">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://your-domain.com/">
+  <meta property="twitter:title" content="Nguyễn Cảnh Điền - Du Học Sinh Hàn Quốc">
+  <meta property="twitter:description" content="Trang cá nhân của Nguyễn Cảnh Điền — Du Học Sinh Hàn Quốc, DJ Producer, Lập trình viên web">
+  <meta property="twitter:image" content="https://your-domain.com/og-image.jpg">
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  <!-- Preload important resources -->
+  <link rel="preload" href="ENdiii.jpg.webp" as="image" fetchpriority="high">
+  <link rel="preload" href="music.mp3" as="audio" fetchpriority="low">
+  
+  <!-- Preconnect to external domains -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+</head>
+<body>
+  <!-- Accessibility skip link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <!-- Custom Cursors -->
+  <div id="custom-cursor" class="custom-cursor"></div>
+  <div id="cursor-dot" class="cursor-dot"></div>
+  <div id="cursor-outline" class="cursor-outline"></div>
+
+  <!-- Splash Screen with enhanced animations -->
+  <div id="splash-screen" class="splash-screen" role="dialog" aria-modal="true" aria-labelledby="splash-title">
+    <div class="splash-content">
+      <h1 id="splash-title" class="splash-title">Chào Mừng Bạn</h1>
+      <p class="splash-subtitle">Khám phá thế giới của Nguyễn Cảnh Điền</p>
+      <button class="splash-btn" aria-label="Bắt đầu khám phá">
+        <span class="btn-text">✨ Bắt đầu cuộc phiêu lưu ✨</span>
+        <span class="btn-icon">→</span>
+      </button>
+    </div>
+    <div class="splash-particles"></div>
+  </div>
+  
+  <div id="splash-overlay" class="splash-overlay"></div>
+
+  <!-- Background Music with enhanced controls -->
+  <audio id="bg-music" src="music.mp3" loop preload="auto" aria-label="Nhạc nền"></audio>
+  <div id="music-controls" class="music-controls" aria-label="Điều khiển nhạc">
+    <button id="musicToggle" class="music-toggle" aria-label="Bật/Tắt nhạc" aria-pressed="false">
+      <span class="music-icon">🎵</span>
+      <span class="music-tooltip">Nhạc nền</span>
+    </button>
+    <div class="music-visualizer"></div>
+  </div>
+
+  <!-- Dark Mode Toggle -->
+  <div class="theme-toggle">
+    <button id="themeToggle" class="theme-btn" aria-label="Chuyển đổi chủ đề">
+      <span class="theme-icon">🌙</span>
+      <span class="theme-tooltip">Dark Mode</span>
+    </button>
+  </div>
+
+  <!-- Enhanced Canvas Layers -->
+  <canvas id="bg-canvas" class="canvas-layer stars-canvas" aria-hidden="true"></canvas>
+  <canvas id="nebula-canvas" class="canvas-layer nebula-canvas" aria-hidden="true"></canvas>
+  <canvas id="cloud-canvas" class="canvas-layer cloud-canvas" aria-hidden="true"></canvas>
+  <canvas id="particle-canvas" class="canvas-layer particle-canvas" aria-hidden="true"></canvas>
+
+  <!-- Enhanced Blob Elements with more animations -->
+  <div class="blob-container">
+    <div class="blob b1" data-speed="0.5"></div>
+    <div class="blob b2" data-speed="0.7"></div>
+    <div class="blob b3" data-speed="0.3"></div>
+    <div class="blob b4" data-speed="0.9"></div>
+    <div class="blob b5" data-speed="0.4"></div>
+  </div>
+
+  <!-- Main Content -->
+  <main id="main-content" class="main-content">
+    <div class="wrap">
+      <article class="card" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.3">
+        <section class="intro">
+          <header>
+            <h1 class="reveal" data-delay="0">Nguyễn Cảnh Điền</h1>
+            <p class="lead reveal" data-delay="100">
+              Du Học Sinh <strong>24/10/2002</strong> — <em>Nghệ An</em>
+            </p>
+          </header>
+
+          <div class="roles reveal" data-delay="200">
+            <span class="pill" data-tooltip="Đang theo học tại Hàn Quốc">🇰🇷 Du Học Sinh Hàn Quốc</span>
+            <span class="pill" data-tooltip="Đam mê âm nhạc">🎵 Yêu thích Âm Nhạc</span>
+            <span class="pill" data-tooltip="Sản xuất âm nhạc chuyên nghiệp">🎧 Đam mê DJ PRODUCER</span>
+            <span class="pill" data-tooltip="Phát triển web hiện đại">💻 Lập Trình Web</span>
+          </div>
+
+          <div class="typing-container reveal" data-delay="300">
+            <div class="typing" id="typing" aria-live="polite" aria-atomic="true"></div>
+            <div class="typing-cursor"></div>
+          </div>
+          
+          <p class="reveal" data-delay="400">
+            Nhận Làm Web Và Bán Nhạc. Ai Cần Thì Liên Hệ Mik Qua FB Nha
+          </p>
+
+          <div class="actions reveal" data-delay="500">
+            <a href="#socials" class="btn primary" aria-label="Kết nối với tôi">
+              <span class="btn-icon">🤝</span>
+              <span>Kết nối</span>
+            </a>
+            <button id="downloadBtn" class="btn" type="button" aria-label="Tải trang web về máy">
+              <span class="btn-icon">⬇️</span>
+              <span>Tải HTML</span>
+            </button>
+            <button id="copyEmailBtn" class="btn" type="button" aria-label="Sao chép email">
+              <span class="btn-icon">📧</span>
+              <span>Copy Email</span>
+            </button>
+            <button id="shareBtn" class="btn" type="button" aria-label="Chia sẻ trang">
+              <span class="btn-icon">🔗</span>
+              <span>Chia sẻ</span>
+            </button>
+          </div>
+
+          <div class="grid-btm reveal" data-delay="600">
+            <div class="card-mini location-card">
+              <div class="border-glow"></div>
+              <div class="bg-coverage"></div>
+              <div class="gradient-overlay"></div>
+              <div class="gradient-full"></div>
+              <div class="card-icon">🏠</div>
+              <div class="card-content">
+                <strong>Quê Quán</strong>
+                <div>Nam Đàn - Nghệ An - Việt Nam</div>
+              </div>
+            </div>
+            <div class="card-mini residence-card">
+              <div class="border-glow"></div>
+              <div class="bg-coverage"></div>
+              <div class="gradient-overlay"></div>
+              <div class="gradient-full"></div>
+              <div class="card-icon">🇰🇷</div>
+              <div class="card-content">
+                <strong>Sinh Sống</strong>
+                <div>Hàn Quốc</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="side" id="socials">
+          <div class="avatar-container reveal" data-delay="100">
+            <div class="avatar">
+              <img 
+                src="ENdiii.jpg.webp" 
+                alt="Ảnh đại diện Nguyễn Cảnh Điền" 
+                loading="lazy"
+                width="120"
+                height="120"
+              />
+              <div class="avatar-ring"></div>
+            </div>
+            <h2 class="profile-name">Nguyễn Cảnh Điền</h2>
+            <p class="profile-title">Du Học Sinh & DJ Producer</p>
+          </div>
+
+          <nav class="socials" aria-label="Mạng xã hội">
+            <a 
+              href="https://www.facebook.com/Ensidy24102002/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="social-link facebook"
+              aria-label="Facebook của Nguyễn Cảnh Điền"
+            >
+              <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+              <span class="social-text">Facebook</span>
+              <span class="social-arrow">→</span>
+            </a>
+            <a 
+              href="https://www.instagram.com/endiii.02/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="social-link instagram"
+              aria-label="Instagram của Nguyễn Cảnh Điền"
+            >
+              <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1112.324 0 6.162 6.162 0 01-12.324 0zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.405a1.44 1.44 0 112.881.001 1.44 1.44 0 01-2.881-.001z"/>
+              </svg>
+              <span class="social-text">Instagram</span>
+              <span class="social-arrow">→</span>
+            </a>
+            <a 
+              href="https://github.com/Endiii02" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="social-link github"
+              aria-label="GitHub của Nguyễn Cảnh Điền"
+            >
+              <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+              <span class="social-text">GitHub</span>
+              <span class="social-arrow">→</span>
+            </a>
+            <a 
+              href="https://www.youtube.com/@ENDiii02" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="social-link youtube"
+              aria-label="YouTube của Nguyễn Cảnh Điền"
+            >
+              <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+              <span class="social-text">YouTube</span>
+              <span class="social-arrow">→</span>
+            </a>
+            <a 
+              href="https://www.tiktok.com/@...endiii_02" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="social-link tiktok"
+              aria-label="TikTok của Nguyễn Cảnh Điền"
+            >
+              <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+              </svg>
+              <span class="social-text">TikTok</span>
+              <span class="social-arrow">→</span>
+            </a>
+          </nav>
+
+          <div class="contact-info">
+            <p class="contact-hint">
+              💡 Mẹo: Ib Để Mang Về Cho Mình Một Web Profile Thật Đẹp Nha.
+            </p>
+            <div class="contact-email">
+              <span class="email-label">📧 Email:</span>
+              <span class="email-address">nguyencanhdien2002.org@gmail.com</span>
+            </div>
+          </div>
+        </aside>
+      </article>
+    </div>
+  </main>
+
+  <!-- Blog Section -->
+  <section id="blog" class="blog-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Blog & Cập Nhật</h2>
+        <p class="section-subtitle">Chia sẻ kiến thức, kinh nghiệm và những câu chuyện thú vị trên hành trình của tôi</p>
+      </div>
+
+      <!-- Blog Categories -->
+      <div class="blog-categories">
+        <button class="category-btn active" data-category="all">Tất cả</button>
+        <button class="category-btn" data-category="du học">Du học</button>
+        <button class="category-btn" data-category="công nghệ">Công nghệ</button>
+        <button class="category-btn" data-category="âm nhạc">Âm nhạc</button>
+        <button class="category-btn" data-category="sự nghiệp">Sự nghiệp</button>
+      </div>
+
+      <!-- Featured Posts -->
+      <div class="featured-posts">
+        <div class="featured-post">
+          <div class="featured-image">
+            <img src="https://pub-cdn.sider.ai/u/U0X7HV695OX/web-coder/68b15c8638697d89a13b920f/resource/b38fec08-256e-4a59-8989-5ada07b41394.jpg" alt="Hành trình du học Hàn Quốc" loading="lazy" />
+            <div class="featured-badge">Nổi bật</div>
+          </div>
+          <div class="featured-content">
+            <div class="post-meta">
+              <span class="post-category">Du học</span>
+              <span class="post-date">15/01/2024</span>
+              <span class="post-read-time">5 phút đọc</span>
+            </div>
+            <h3 class="featured-title">Hành trình du học Hàn Quốc của tôi</h3>
+            <p class="featured-excerpt">Chia sẻ những trải nghiệm đầu tiên khi đặt chân đến đất nước Hàn Quốc, từ văn hóa đến ẩm thực và cuộc sống sinh viên...</p>
+            <div class="post-tags">
+              <span class="tag">du học</span>
+              <span class="tag">hàn quốc</span>
+              <span class="tag">sinh viên</span>
+            </div>
+            <a href="#" class="read-more-btn">Đọc tiếp →</a>
+          </div>
+        </div>
+
+        <div class="featured-post">
+          <div class="featured-image">
+            <img src="https://pub-cdn.sider.ai/u/U0X7HV695OX/web-coder/68b15c8638697d89a13b920f/resource/a9782a3c-3c4b-41f0-8b8a-8bb2fa493513.jpg" alt="Từ DJ Producer đến Lập trình viên" loading="lazy" />
+            <div class="featured-badge">Nổi bật</div>
+          </div>
+          <div class="featured-content">
+            <div class="post-meta">
+              <span class="post-category">Sự nghiệp</span>
+              <span class="post-date">10/01/2024</span>
+              <span class="post-read-time">8 phút đọc</span>
+            </div>
+            <h3 class="featured-title">Từ DJ Producer đến Lập trình viên</h3>
+            <p class="featured-excerpt">Làm thế nào tôi cân bằng giữa đam mê âm nhạc và sự nghiệp lập trình? Hành trình chuyển đổi ngành đầy thú vị...</p>
+            <div class="post-tags">
+              <span class="tag">dj</span>
+              <span class="tag">lập trình</span>
+              <span class="tag">sự nghiệp</span>
+            </div>
+            <a href="#" class="read-more-btn">Đọc tiếp →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Posts Grid -->
+      <div class="blog-posts-grid">
+        <article class="blog-post">
+          <div class="post-image">
+            <img src="https://pub-cdn.sider.ai/u/U0X7HV695OX/web-coder/68b15c8638697d89a13b920f/resource/ac4a313d-7bfe-44ab-8721-2532403d8ec7.jpg" alt="Xu hướng Web Development 2024" loading="lazy" />
+          </div>
+          <div class="post-content">
+            <div class="post-meta">
+              <span class="post-category">Công nghệ</span>
+              <span class="post-date">05/01/2024</span>
+              <span class="post-read-time">6 phút đọc</span>
+            </div>
+            <h3 class="post-title">Xu hướng Web Development 2024</h3>
+            <p class="post-excerpt">Tổng hợp những công nghệ và framework mới nhất trong lĩnh vực phát triển web mà mọi developer nên biết...</p>
+            <div class="post-tags">
+              <span class="tag">web</span>
+              <span class="tag">công nghệ</span>
+              <span class="tag">trending</span>
+            </div>
+            <a href="#" class="read-more-btn">Đọc tiếp →</a>
+          </div>
+        </article>
+
+        <article class="blog-post">
+          <div class="post-image">
+            <img src="https://pub-cdn.sider.ai/u/U0X7HV695OX/web-coder/68b15c8638697d89a13b920f/resource/c329f679-0fd2-40cf-b57a-0e839d565c05.jpg" alt="Sản xuất nhạc tại nhà" loading="lazy" />
+          </div>
+          <div class="post-content">
+            <div class="post-meta">
+              <span class="post-category">Âm nhạc</span>
+              <span class="post-date">28/12/2023</span>
+              <span class="post-read-time">10 phút đọc</span>
+            </div>
+            <h3 class="post-title">Sản xuất nhạc tại nhà: Hướng dẫn cơ bản</h3>
+            <p class="post-excerpt">Chia sẻ kiến thức cơ bản về sản xuất nhạc tại nhà, từ setup thiết bị đến phần mềm cần thiết...</p>
+            <div class="post-tags">
+              <span class="tag">âm nhạc</span>
+              <span class="tag">sản xuất</span>
+              <span class="tag">hướng dẫn</span>
+            </div>
+            <a href="#" class="read-more-btn">Đọc tiếp →</a>
+          </div>
+        </article>
+
+        <article class="blog-post">
+          <div class="post-image">
+            <img src="https://pub-cdn.sider.ai/u/U0X7HV695OX/web-coder/68b15c8638697d89a13b920f/resource/5eb1c4f0-6f54-46be-a694-90f3bf88e8a4.jpg" alt="React 18 What's New" loading="lazy" />
+          </div>
+          <div class="post-content">
+            <div class="post-meta">
+              <span class="post-category">Công nghệ</span>
+              <span class="post-date">20/12/2023</span>
+              <span class="post-read-time">7 phút đọc</span>
+            </div>
+            <h3 class="post-title">React 18: What's New?</h3>
+            <p class="post-excerpt">Khám phá những tính năng mới trong React 18 và cách chúng cải thiện performance cho ứng dụng của bạn...</p>
+            <div class="post-tags">
+              <span class="tag">react</span>
+              <span class="tag">javascript</span>
+              <span class="tag">frontend</span>
+            </div>
+            <a href="#" class="read-more-btn">Đọc tiếp →</a>
+          </div>
+        </article>
+
+        <article class="blog-post">
+          <div class="post-image">
+            <img src="https://pub-cdn.sider.ai/u/U0X7HV695OX/web-coder/68b15c8638697d89a13b920f/resource/db5b8f3a-6ca0-4950-b793-3d6a5a19127f.jpg" alt="Văn hóa làm việc tại Hàn Quốc" loading="lazy" />
+          </div>
+          <div class="post-content">
+            <div class="post-meta">
+              <span class="post-category">Du học</span>
+              <span class="post-date">15/12/2023</span>
+              <span class="post-read-time">4 phút đọc</span>
+            </div>
+            <h3 class="post-title">Văn hóa làm việc tại Hàn Quốc</h3>
+            <p class="post-excerpt">Trải nghiệm thực tế về văn hóa làm việc của người Hàn và cách thích nghi cho du học sinh Việt Nam...</p>
+            <div class="post-tags">
+              <span class="tag">văn hóa</span>
+              <span class="tag">hàn quốc</span>
+              <span class="tag">làm việc</span>
+            </div>
+            <a href="#" class="read-more-btn">Đọc tiếp →</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- View All Posts Button -->
+      <div class="blog-actions">
+        <a href="#" class="btn primary">Xem tất cả bài viết</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section id="newsletter" class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-content">
+        <div class="newsletter-info">
+          <h2 class="newsletter-title">Đăng ký nhận bản tin</h2>
+          <p class="newsletter-subtitle">Cập nhật những bài viết mới nhất, chia sẻ kiến thức và kinh nghiệm từ tôi</p>
+          <div class="newsletter-benefits">
+            <div class="benefit-item">
+              <span class="benefit-icon">📧</span>
+              <span class="benefit-text">Nhận bài viết mới hàng tuần</span>
+            </div>
+            <div class="benefit-item">
+              <span class="benefit-icon">🎵</span>
+              <span class="benefit-text">Thông tin về sản phẩm âm nhạc</span>
+            </div>
+            <div class="benefit-item">
+              <span class="benefit-icon">💻</span>
+              <span class="benefit-text">Tips & tricks về lập trình</span>
+            </div>
+            <div class="benefit-item">
+              <span class="benefit-icon">🇰🇷</span>
+              <span class="benefit-text">Kinh nghiệm du học Hàn Quốc</span>
+            </div>
+          </div>
+        </div>
+        <div class="newsletter-form">
+          <form id="newsletterForm">
+            <div class="form-group">
+              <input type="text" id="newsletterName" placeholder="Họ và tên của bạn" required />
+            </div>
+            <div class="form-group">
+              <input type="email" id="newsletterEmail" placeholder="Email của bạn" required />
+            </div>
+            <div class="form-group">
+              <select id="newsletterCategory" required>
+                <option value="">Chọn chủ đề quan tâm</option>
+                <option value="du học">Du học Hàn Quốc</option>
+                <option value="công nghệ">Lập trình & Công nghệ</option>
+                <option value="âm nhạc">Âm nhạc & DJ Producer</option>
+                <option value="tất cả">Tất cả chủ đề</option>
+              </select>
+            </div>
+            <div class="form-checkbox">
+              <input type="checkbox" id="newsletterConsent" required />
+              <label for="newsletterConsent">Tôi đồng ý nhận email thông báo và đã đọc điều khoản sử dụng</label>
+            </div>
+            <button type="submit" class="btn primary newsletter-submit">Đăng ký ngay</button>
+          </form>
+          <div class="newsletter-privacy">
+            <p>Chúng tôi tôn trọng quyền riêng tư của bạn. Bạn có thể hủy đăng ký bất cứ lúc nào.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="more" class="footer">
+    <div class="footer-content">
+      <p>&copy; 2024 Nguyễn Cảnh Điền. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#" class="footer-link">Privacy Policy</a>
+        <a href="#" class="footer-link">Terms of Service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Made with ❤️ by Nguyễn Cảnh Điền</p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
